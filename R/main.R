@@ -3,41 +3,21 @@ library(compositions) # for clr
 library(metagenomeSeq) # for css
 library(QRank) 
 library(ZINQ)
+source('util.R')
 
-tss = function(X) {
-  temp = t( apply(X, 1, function(z){ z / sum(z)}) ) ### TSS sum=1
-  return(temp)
-}
+# This function provides the omnibus result (p-value) 
+# based on some popular normalization methods: none, rarefaction, TSS, CSS, CLR,
+# by the linear regression, ZINQ, and QRank association testing methods.
 
-css = function(X) {
-  X = t(X)
-  
-  m = ncol(X) 
-  ntaxa = nrow(X)
-  
-  colnames(X) = 1:m
-  rownames(X) = 1:ntaxa
-  
-  OTUdata = AnnotatedDataFrame(data.frame(taxa=rownames(X)))
-  obj = newMRexperiment(X, featureData=OTUdata)
-  
-  p = cumNormStatFast(obj)
-  obj0 = cumNorm(obj, p = p)
-  res = data.frame(MRcounts(obj0, norm=TRUE, log=TRUE))
-  
-  return(res)
-}
-
-tau1 = c(0.1, 0.25, 0.5, 0.75, 0.9)
-tau2 = c(0.25, 0.5, 0.75)
-
-# X: covariates. 
+# X: covariates
 # select interesting covariates through i, e.g., i = c(1, 2, 4)
-# k: the name(s) of clinical variable(s) of interest in X
+# k: the index of clinical variable(s) of interest in X
 # Y: taxa
 # select interesting taxa through j, e.g., j = 35
-# apply the linear regression, ZINQ, and QRank methods
+
+# use the linear regression, ZINQ, and QRank methods
 # with normalization strategies: none, rarefaction, TSS, CSS, CLR
+
 omni = function(X, Y, i, j, k) {
   Y_none = Y
   Y_rare = Rarefy(Y)$otu.tab.rff
