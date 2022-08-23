@@ -1,6 +1,6 @@
 # Omnibus_normalization
 
-This repository provides the R function for the paper: 
+This repository provides the _R_ function for the paper: 
 
 Accommodating Multiple Potential Normalizations in Microbiome Associations Studies (under review). \
 Song, H., Ling, W., Zhao, N., Plantinga, A.M., Broedlow, C.A., Klatt, N.R., Hensley-McBain, T., Wu, M.C.
