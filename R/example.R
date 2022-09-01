@@ -1,5 +1,7 @@
 # This example refers to the example in an R Package MiRKAT.
 
+source('main.R')
+
 data(throat.tree)
 data(throat.otu.tab)
 data(throat.meta)
