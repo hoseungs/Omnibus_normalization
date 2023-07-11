@@ -2,8 +2,7 @@
 
 This repository provides the _R_ function for the paper: 
 
-**Song, H.**, Ling, W., Zhao, N., Plantinga, A.M., Broedlow, C.A., Klatt, N.R., \
-  Hensley-McBain, T., Wu, M.C. (2023). \
+**Song, H.**, Ling, W., Zhao, N., Plantinga, A.M., Broedlow, C.A., Klatt, N.R., Hensley-McBain, T., Wu, M.C. (2023). \
   [Accommodating multiple potential normalizations in microbiome associations studies.](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05147-w)   \
   **_BMC Bioinformatics, 24(1):22._**
 
