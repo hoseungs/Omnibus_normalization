@@ -2,8 +2,10 @@
 
 This repository provides the _R_ function for the paper: 
 
-Accommodating Multiple Potential Normalizations in Microbiome Associations Studies (under review). \
-Song, H., Ling, W., Zhao, N., Plantinga, A.M., Broedlow, C.A., Klatt, N.R., Hensley-McBain, T., Wu, M.C.
+**Song, H.**, Ling, W., Zhao, N., Plantinga, A.M., Broedlow, C.A., Klatt, N.R., \
+  Hensley-McBain, T., Wu, M.C. (2023). \
+  [Accommodating multiple potential normalizations in microbiome associations studies.](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05147-w)   \
+  **_BMC Bioinformatics, 24(1):22._**
 
 * The main function, **omni**, provides the omnibus p-value by combining popular normalization strategies, such as none, rarefaction, TSS, CSS, and CLR, based on the Cauchy combination test (Liu et al., 2020).
 
